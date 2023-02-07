@@ -1,0 +1,2420 @@
+_type: export
+__export_format: 4
+__export_source: apimatic.transformer
+resources:
+- name: Finicity APIs
+  _type: workspace
+  _id: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: >-
+    OpenAPI specification for Finicity APIs
+
+
+    ![](https://raw.githubusercontent.com/Mastercard/finicity-openapi/main/res/logo.png)
+- name: Accounts
+  _type: request_group
+  _id: fld_31de7418dddf4f66a42fccf856ed5dc9
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Fetch or refresh customer accounts
+- name: Analytics and Attributes
+  _type: request_group
+  _id: fld_14a74c7daecd44a59ef9a5cdc00ce20e
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Generate and fetch consumer attributes (Beta)
+- name: App Registration
+  _type: request_group
+  _id: fld_2e51118f77d842ba98fcf0b7f83c1666
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Register and assign apps to customers
+- name: Assets
+  _type: request_group
+  _id: fld_836003dbf17a4116b4d841b1abd8fbd1
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Download asset files
+- name: Authentication
+  _type: request_group
+  _id: fld_23146a5e15024d9485168bef666a757c
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Generate authentication tokens and manage credentials
+- name: Balance Analytics
+  _type: request_group
+  _id: fld_3e5054107f22425e83d7505990e97258
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Balance Analytics for businesses
+- name: Bank Statements
+  _type: request_group
+  _id: fld_527c8e1b6bb247ccb48d3688a768528b
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Fetch account statements and generate reports asynchronously
+- name: Cash Flow
+  _type: request_group
+  _id: fld_3058dacd01a24217ab76bcf8c9e49479
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Generate cash flow reports asynchronously
+- name: Cash Flow Analytics
+  _type: request_group
+  _id: fld_ca14a252acce4a46bae84e1512f694bb
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Cash Flow Analytics for business
+- name: "Connect \U0001F517"
+  _type: request_group
+  _id: fld_1156617dceb043e6ac2d6c19c7292800
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Allow customers to log into their financial institutions and grant Finicity authorization
+- name: Consumers
+  _type: request_group
+  _id: fld_214ad25123f24a97b825797ed1b1c6c0
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Create and manage consumers associated with customers in order to use report services
+- name: Customers
+  _type: request_group
+  _id: fld_9ebed99bcdde40b681ebbf1d26801b20
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Enroll and manage customers
+- name: Institutions
+  _type: request_group
+  _id: fld_078ec942c4c04efaa550310e3a1359d2
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Search and fetch financial institutions
+- name: Pay Statements
+  _type: request_group
+  _id: fld_45bc3ee4c3f748e399b1b881c7ff5e61
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Upload pay statements
+- name: Payments
+  _type: request_group
+  _id: fld_e2a98ef102564a3a9a997215a444610f
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Fetch ACH details and account balances
+- name: Portfolios
+  _type: request_group
+  _id: fld_2b2e9e2b922d4d62b73bbbce136090a6
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Generate portfolios of the most recent reports
+- name: Reports
+  _type: request_group
+  _id: fld_3e48b58d35254cb7a46e5df90f874e93
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Fetch generated reports when ready
+- name: Transactions
+  _type: request_group
+  _id: fld_af4dcff211724b47a4689dfc8352f4dd
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Fetch customer and account transactions and generate reports asynchronously
+- name: TxPush
+  _type: request_group
+  _id: fld_684a6296275049719a1a1aa385e210dc
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Manage TxPush subscriptions
+- name: Verify Assets
+  _type: request_group
+  _id: fld_0e7d9d3743c343eb93fb3c4dc7ebfe91
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Generate asset reports asynchronously
+- name: Verify Income and Employment
+  _type: request_group
+  _id: fld_47da39632e574efbacfefd5c8e2c0c43
+  parentId: wrk_ef977e56d0bb49bb836b7372db931a43
+  description: Generate income and employment reports asynchronously
+- name: GetCustomerAccountsByInstitutionLogin
+  method: GET
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/institutionLogins/{institutionLoginId}/accounts
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key33
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token9
+    disabled: false
+  _type: request
+  _id: req_917b43a1c4604f67ad389109f0b03ac4
+  parentId: fld_31de7418dddf4f66a42fccf856ed5dc9
+  description: "Get all accounts associated with the given institution login. All accounts returned are accessible by a single set of credentials on a single institution.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: RefreshCustomerAccountsByInstitutionLogin
+  method: POST
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/institutionLogins/{institutionLoginId}/accounts
+  body:
+    mimeType: application/json
+    text: any
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key31
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token79
+    disabled: false
+  _type: request
+  _id: req_2d52ee5824cc432d8005fcd682025ea1
+  parentId: fld_31de7418dddf4f66a42fccf856ed5dc9
+  description: "Refresh account and transaction data for all accounts associated with a given `institutionLoginId` with a connection to the institution.\n\nClient apps are not permitted to automate calls to the Refresh services. Active accounts are automatically refreshed by Finicity once per day. Because many financial institutions only post transactions once per day, calling Refresh repeatedly is usually a waste of resources and is not recommended.\n\nApps may call Refresh services for a specific customer when there is a specific business case for the need of data that is up to date as of the moment. Please discuss with your account manager and systems engineer for further clarification.\n\nThe recommended timeout setting for this request is 120 seconds in order to receive a response. However, you can terminate the connection after making the call the operation will still complete. You will have to pull the account records to check for an updated aggregation attempt date to know when the refresh is complete.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: DeleteCustomerAccountsByInstitutionLogin
+  method: DELETE
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/institutionLogins/{institutionLoginId}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key72
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token27
+    disabled: false
+  _type: request
+  _id: req_a05a5d8e937147d096b018dc5546b3b1
+  parentId: fld_31de7418dddf4f66a42fccf856ed5dc9
+  description: "Remove from Finicity aggregation the set of accounts matching the institution login ID.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetCustomerAccount
+  method: GET
+  url: https://api.finicity.com/aggregation/v2/customers/{customerId}/accounts/{accountId}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key39
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token31
+    disabled: false
+  _type: request
+  _id: req_f6cb2df455f4413782c3beef78df6b3f
+  parentId: fld_31de7418dddf4f66a42fccf856ed5dc9
+  description: "Get a customer account by ID.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: DeleteCustomerAccount
+  method: DELETE
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/accounts/{accountId}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key28
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token9
+    disabled: false
+  _type: request
+  _id: req_dd5def6876f8499da2b0c3e31d169136
+  parentId: fld_31de7418dddf4f66a42fccf856ed5dc9
+  description: "Remove the given account from Finicity aggregation.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetCustomerAccounts
+  method: GET
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/accounts
+  parameters:
+  - name: status
+    value: pending
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key37
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token81
+    disabled: false
+  _type: request
+  _id: req_49a8e3125d974ea3bfee687a4fcdd88f
+  parentId: fld_31de7418dddf4f66a42fccf856ed5dc9
+  description: "Get all accounts owned by the given customer.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: RefreshCustomerAccounts
+  method: POST
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/accounts
+  body:
+    mimeType: application/json
+    text: any
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key41
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token30
+    disabled: false
+  _type: request
+  _id: req_9007b7972a5f41458bc61cbef56a0a5d
+  parentId: fld_31de7418dddf4f66a42fccf856ed5dc9
+  description: "Refresh account and transaction data for all accounts associated with the  given `customerId` with a connection to the institution.\n\nClient apps are not permitted to automate calls to the Refresh services. Active accounts are automatically refreshed by Finicity once per day. Because many financial institutions only post transactions once per day, calling Refresh repeatedly is usually a waste of resources and is not recommended.\n\nApps may call Refresh services for a specific customer when there is a specific business case for the need of data that is up to date as of the moment. Please discuss with your account manager and systems engineer for further clarification.\n\nThe recommended timeout setting for this request is 120 seconds in order to receive a response. However, you can terminate the connection after making the call the operation will still complete. You will have to pull the account records to check for an updated aggregation attempt date to know when the refresh is complete.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetCustomerAccountsByInstitution
+  method: GET
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/institutions/{institutionId}/accounts
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key19
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token76
+    disabled: false
+  _type: request
+  _id: req_06afe5ed609e4b1d932559511d1f5f99
+  parentId: fld_31de7418dddf4f66a42fccf856ed5dc9
+  description: "Get all active accounts owned by the given customer at the given institution.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateConsumerAttributes
+  method: POST
+  url: https://api.finicity.com/analytics/ca360/v1/customers/{customerId}/analytics
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "accountIds": [
+
+          "accountIds34"
+
+        ]
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key8
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token61
+    disabled: false
+  _type: request
+  _id: req_9aa1e8f655c9413eab58e930871d15d3
+  parentId: fld_14a74c7daecd44a59ef9a5cdc00ce20e
+  description: "Generate a Consumer Attributes report for the given customer. The \"to\" and \"from\" date range is the last 12 months of consumer data, based on the date at which the report was generated.\n\nAn analytic ID is created and associated with the customer's ID. If you generate multiple Consumer Attributes reports for the same customer, then each report will have its own analytic ID.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: ListConsumerAttributes
+  method: GET
+  url: https://api.finicity.com/analytics/ca360/v1/customers/{customerId}/analytics
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key72
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token97
+    disabled: false
+  _type: request
+  _id: req_a766e1da543442139354c108f4fe9cde
+  parentId: fld_14a74c7daecd44a59ef9a5cdc00ce20e
+  description: "Retrieve a list of all analytic IDs previously created for a customer using the Generate Consumer Attributes APIs.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateFCRAConsumerAttributes
+  method: POST
+  url: https://api.finicity.com/analytics/ca360/v1/customers/{customerId}/analytics/fcra
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "accountIds": [
+
+          "accountIds34"
+
+        ]
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key45
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token0
+    disabled: false
+  _type: request
+  _id: req_3f80026fd7ee456381ee43bf20dc86c4
+  parentId: fld_14a74c7daecd44a59ef9a5cdc00ce20e
+  description: "_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetConsumerAttributesByID
+  method: GET
+  url: https://api.finicity.com/analytics/ca360/v1/customers/{customerId}/analytics/{analyticsId}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key91
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token60
+    disabled: false
+  _type: request
+  _id: req_1ca40d2b31b042e387d07a10e1966d99
+  parentId: fld_14a74c7daecd44a59ef9a5cdc00ce20e
+  description: "Retrieve a Consumer Attributes report for a customer.\n\nUse the analytic and customer IDs to retrieve 12 months of data attributes according to the \"to\" and \"from\" date range of the report at the time it was created. \n\nIf the current date is before the end of the calendar month, then the most recent month provides all available data up to the current date.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetFCRAConsumerAttributesByID
+  method: GET
+  url: https://api.finicity.com/analytics/ca360/v1/customers/{customerId}/analytics/{analyticsId}/fcra
+  parameters:
+  - name: purpose
+    value: '99'
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key86
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token72
+    disabled: false
+  _type: request
+  _id: req_20cb1909a1874c7890d1509742b68f70
+  parentId: fld_14a74c7daecd44a59ef9a5cdc00ce20e
+  description: "Retrieve a FCRA Consumer Attributes report for a customer.\n\nUse the analytic and customer IDs to retrieve 12 months of FCRA data attributes according to the `To` and `From` date range of the report at the time it was created. \n\nIf the current date is before the end of the calendar month, then the most recent month provides all available data up to the current date.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: RegisterApp
+  method: POST
+  url: https://api.finicity.com/aggregation/v1/partners/applications
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "appDescription": "The app that makes your budgeting experience awesome",
+
+        "appName": "Awesome Budget App",
+
+        "appUrl": "https://www.finicity.com/",
+
+        "ownerAddressLine1": "434 W Ascension Way",
+
+        "ownerAddressLine2": "Suite #200",
+
+        "ownerCity": "Murray",
+
+        "ownerCountry": "USA",
+
+        "ownerName": "Finicity",
+
+        "ownerPostalCode": "84123",
+
+        "ownerState": "UT",
+
+        "image": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgICAKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB2ZXJzaW9uPSIxLjEiCiAgIHZpZXdCb3g9IjAgMCAwIDAiCiAgIGhlaWdodD0iMCIKICAgd2lkdGg9IjAiPgogICAgPGcvPgo8L3N2Zz4K"
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key53
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token90
+    disabled: false
+  _type: request
+  _id: req_4f9fa6e8c7d04e1786d6c9606f57c98a
+  parentId: fld_2e51118f77d842ba98fcf0b7f83c1666
+  description: "Register a new application to access financial institutions using OAuth connections.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: ModifyAppRegistration
+  method: PUT
+  url: https://api.finicity.com/aggregation/v1/partners/applications/{preAppId}
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "appDescription": "The app that makes your budgeting experience awesome",
+
+        "appName": "Awesome Budget App",
+
+        "appUrl": "https://www.finicity.com/",
+
+        "ownerAddressLine1": "434 W Ascension Way",
+
+        "ownerAddressLine2": "Suite #200",
+
+        "ownerCity": "Murray",
+
+        "ownerCountry": "USA",
+
+        "ownerName": "Finicity",
+
+        "ownerPostalCode": "84123",
+
+        "ownerState": "UT",
+
+        "image": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgICAKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB2ZXJzaW9uPSIxLjEiCiAgIHZpZXdCb3g9IjAgMCAwIDAiCiAgIGhlaWdodD0iMCIKICAgd2lkdGg9IjAiPgogICAgPGcvPgo8L3N2Zz4K"
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key25
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token90
+    disabled: false
+  _type: request
+  _id: req_e37d334f9fee48578c941cbf2ebea77f
+  parentId: fld_2e51118f77d842ba98fcf0b7f83c1666
+  description: "Update a registered application.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetAppRegistrationStatus
+  method: GET
+  url: https://api.finicity.com/aggregation/v2/partners/applications
+  parameters:
+  - name: preAppId
+    value: '2581'
+    disabled: false
+  - name: applicationId
+    value: '123456789'
+    disabled: false
+  - name: status
+    value: P
+    disabled: false
+  - name: appName
+    value: Awesome Budget App
+    disabled: false
+  - name: submittedDate
+    value: '1607450357'
+    disabled: false
+  - name: modifiedDate
+    value: '1607450357'
+    disabled: false
+  - name: page
+    value: '1'
+    disabled: false
+  - name: pageSize
+    value: '1'
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key68
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token35
+    disabled: false
+  _type: request
+  _id: req_70eab552170e48789d35476abcc7cc27
+  parentId: fld_2e51118f77d842ba98fcf0b7f83c1666
+  description: "Get the status of your application registration(s).\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: SetCustomerAppID
+  method: PUT
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/applications/{applicationId}
+  body:
+    mimeType: application/json
+    text: any
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key17
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token86
+    disabled: false
+  _type: request
+  _id: req_7643d309a018421a8136942901bdb123
+  parentId: fld_2e51118f77d842ba98fcf0b7f83c1666
+  description: "If you have multiple applications for a single client, and you want to register their applications to access financial institutions using OAuth connections, then use this API to assign applications to an existing customer.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: MigrateInstitutionLoginAccounts
+  method: PUT
+  url: https://api.finicity.com/aggregation/v2/customers/{customerId}/institutionLogins/{institutionLoginId}/migration
+  body:
+    mimeType: application/json
+    text: any
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key62
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token15
+    disabled: false
+  _type: request
+  _id: req_7e9ddaae290b40a3ae7d93e683332914
+  parentId: fld_2e51118f77d842ba98fcf0b7f83c1666
+  description: "The `institutionLoginId` parameter uses Finicity's internal FI mapping to move accounts from the current FI legacy connection to the new OAuth FI connection.\n\nThis API returns a list of accounts for the given institution login ID.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetAssetByCustomerID
+  method: GET
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/assets/{assetId}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key55
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token11
+    disabled: false
+  _type: request
+  _id: req_fc4510155bd8446797f773d85941bba7
+  parentId: fld_836003dbf17a4116b4d841b1abd8fbd1
+  description: "Retrieve a binary file for the given asset ID.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: CreateToken
+  method: POST
+  url: https://api.finicity.com/aggregation/v2/partners/authentication
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "partnerId": "1234583871234",
+
+        "partnerSecret": "aqJ5Ic4SEVx2IgDQ6oR4"
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key22
+    disabled: false
+  _type: request
+  _id: req_d042c551977043f784eb2e5d9d96cf76
+  parentId: fld_23146a5e15024d9485168bef666a757c
+  description: "Send Partner ID and Partner Secret to the Partner Authentication service to obtain a token for accessing Finicity APIs.\n* The token is valid for two hours and is required on all calls to the Finicity APIs\n* As a best practice, use a single token for all calls. Assign a timestamp for each token, and then check the current timestamp before making any calls. If the token is greater than 90 minutes, generate a new one.\n* ⚠️ After five failed attempts to authenticate, your account will be locked. Contact [support@finicity.com](mailto:support@finicity.com) to get help resetting your account.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: ModifyPartnerSecret
+  method: PUT
+  url: https://api.finicity.com/aggregation/v2/partners/authentication
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "partnerId": "1234583871234",
+
+        "partnerSecret": "aqJ5Ic4SEVx2IgDQ6oR4",
+
+        "newPartnerSecret": "OrU7tjiA3tIspCgb85xV"
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key87
+    disabled: false
+  _type: request
+  _id: req_4c62a939b5c244ff8ef20435502eff4a
+  parentId: fld_23146a5e15024d9485168bef666a757c
+  description: "Change the Partner Secret used to authenticate this partner.\n\nThe secret does not expire, but can be changed by calling this API. A valid Partner Secret may contain upper and lowercase characters, numbers, and the characters !, @, #, $, %, &, *, _, -, +. It must include at least one number and at least one letter, and its length should be between 12 and 255 characters.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateBalanceAnalytics
+  method: POST
+  url: https://api.finicity.com/analytics/balance/v1/customer/{customerId}
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "accountIds": [
+
+          3
+
+        ],
+
+        "lengthOfReport": 730
+
+      }
+  parameters:
+  - name: reference-number
+    value: abc123
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key28
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token11
+    disabled: false
+  _type: request
+  _id: req_6400957fea4043f2b3318a71875eb118
+  parentId: fld_3e5054107f22425e83d7505990e97258
+  description: "Balance Analytics for Business analyzes bank balances over time to report metrics and identify behavior that may indicate risk.\n\nCalculated metrics include:\n* Current/available account balances\n* Minimum/maximum/average account balances over the requested time\n  period and broken down by month\n\n* Daily ending balance of accounts for each day in the requested time\n  period\n\n* Propensity of the customer's account balances to increase week over\n  week\n\n* Number of days in the requested time period ending with a negative\n  balance\n\n\nThis version of the API is intended for piloting and integration testing your application with the Balance Analytics product. It does not adhere to FCRA requirements, and should not be used for production/lending purposes. See _Generate Balance Analytics - FCRA_ for the FCRA compliant version of this API.\n\nA successful call to this API will generate analytics and store a report within Finicity. The report can be retrieved via _Get Balance Analytics Report_ (operation: _GetObbAnalyticsReport_).\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateBalanceAnalyticsFcra
+  method: POST
+  url: https://api.finicity.com/analytics/balance/v1/customer/{customerId}/fcra
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "accountIds": [
+
+          3
+
+        ],
+
+        "lengthOfReport": 730
+
+      }
+  parameters:
+  - name: reference-number
+    value: abc123
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key57
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token41
+    disabled: false
+  _type: request
+  _id: req_6afef658c9964ad3a8d128d2314e36ee
+  parentId: fld_3e5054107f22425e83d7505990e97258
+  description: "Balance Analytics for Business analyzes bank balances over time to report metrics and identify behavior that may indicate risk.\n\nCalculated metrics include:\n* Current/available account balances\n* Minimum/maximum/average account balances over the requested time\n  period and broken down by month\n\n* Daily ending balance of accounts for each day in the requested time\n  period\n\n* Propensity of the customer's account balances to increase week over\n  week\n\n* Number of days in the requested time period ending with a negative\n  balance\n\n\nThis version of the API is intended for production use. It maintains and enforces all compliance with FCRA rules and requirements.\n\n*Note:* this is a premium service, billable per every successful API call for non-testing customers.\n\nA successful call to this API will generate analytics and store a report within Finicity. The report can be retrieved via _Get Balance Analytics Report - FCRA_ (operation: _GetObbAnalyticsReportFCRA_).\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetObbAnalyticsReport
+  method: GET
+  url: https://api.finicity.com/analytics/data/v1/{obb_report_id}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key91
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token64
+    disabled: false
+  _type: request
+  _id: req_3fadf9c18f834d21804202455c19cd4a
+  parentId: fld_3e5054107f22425e83d7505990e97258
+  description: "Retrieve the report saved by _Generate Balance Analytics_ or _Generate Cash Flow Analytics_. Requires the report ID generated by the previous call.\n\nReport data can either be retrieved as a JSON document or PDF file.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetObbAnalyticsReportFcra
+  method: GET
+  url: https://api.finicity.com/analytics/data/v1/{obb_report_id}/fcra
+  parameters:
+  - name: purpose
+    value: purpose61
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key66
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token60
+    disabled: false
+  _type: request
+  _id: req_3add2ec81b7f4e4796c3d8fdff8a18d1
+  parentId: fld_3e5054107f22425e83d7505990e97258
+  description: "Retrieve the report saved by _Generate Balance Analytics - FCRA_ or _Generate Cash Flow Analytics - FCRA_. Requires the report ID generated by the previous call.\n\nReport data can either be retrieved as a JSON document or PDF file.\n\n*Note:* this is a premium service, billable per every successful API call for non-testing customers.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetCustomerAccountStatement
+  method: GET
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/accounts/{accountId}/statement
+  parameters:
+  - name: index
+    value: '1'
+    disabled: false
+  - name: type
+    value: taxStatement
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key47
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token34
+    disabled: false
+  _type: request
+  _id: req_92a5db65e9254eb6b56c64c3fbc696bf
+  parentId: fld_527c8e1b6bb247ccb48d3688a768528b
+  description: "Retrieve the customer's bank statements in PDF format. Up to 24 months of history is available depending on the financial institution. Since this is a premium service, charges incur per each successful statement retrieved. \n\nFor certified financial institutions, statements are available for the following account types:\n* Checking\n* Savings\n* Money market\n* CDs\n* Investments\n* Mortgage\n* Credit cards\n* Loans\n* Line of credit\n* Student Loans\n\nNote: setting the timeout to 180 seconds is recommended to allow enough time for a response.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateStatementReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/statement
+  body:
+    mimeType: application/json
+    text: '{"statementReportData":{"accountId":1000076901,"index":1},"reportCustomFields":[{"label":"loanID","value":"123456","shown":true}]}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key40
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token41
+    disabled: false
+  _type: request
+  _id: req_6f1470c308df4af4a02dd0833498f9e9
+  parentId: fld_527c8e1b6bb247ccb48d3688a768528b
+  description: "Generate a Statement Report report for the given accounts under the given customer.\n\nThis is a premium service. A billable event will be created upon the successful generation of the Statement Report. \n\nBefore calling this API, a consumer must be created for the given customer ID (see Consumers APIs).\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateCashFlowBusinessReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/cashFlowBusiness
+  body:
+    mimeType: application/json
+    text: '{"accountIds":"1000535275","incomeStreamConfidenceMinimum":50,"reportCustomFields":[{"label":"loanID","value":"12345","shown":true},{"label":"trackingID","value":"5555","shown":true},{"label":"loanType","value":"car","shown":false},{"label":"vendorID","value":"1613aa23","shown":true},{"label":"vendorName","value":"PSC Finance","shown":false}],"showNsf":false,"fromDate":1580558400}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key37
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token28
+    disabled: false
+  _type: request
+  _id: req_d38bc271a12d46cdabf2610a87623aaf
+  parentId: fld_3058dacd01a24217ab76bcf8c9e49479
+  description: "Generate a Cash Flow Report (Business) report for all checking and savings under the given customer. This service retrieves up to two years of transaction history for the given account. It then uses this information to generate the CFR report. A consumer is not required to generate this report.\n\nThis report is not provided under FCRA rules, and this report is not available in the Finicity Consumer Portal for the borrower to view.\n\nIf no account type of checking or savings is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateCashFlowPersonalReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/cashFlowPersonal
+  body:
+    mimeType: application/json
+    text: '{"accountIds":"1000535275","incomeStreamConfidenceMinimum":50,"reportCustomFields":[{"label":"loanID","value":"12345","shown":true},{"label":"trackingID","value":"5555","shown":true},{"label":"loanType","value":"car","shown":false},{"label":"vendorID","value":"1613aa23","shown":true},{"label":"vendorName","value":"PSC Finance","shown":false}],"showNsf":false,"fromDate":1580558400}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key56
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token90
+    disabled: false
+  _type: request
+  _id: req_8ec7fbb6a70043cea80f5f6de715f07b
+  parentId: fld_3058dacd01a24217ab76bcf8c9e49479
+  description: "Generate a Cash Flow Report (Personal) report for all checking and savings under the given customer. This service retrieves up to two years of transaction history for the given account. It then uses this information to generate the CFR report.\n\nThis report is provided under FCRA rules, with Finicity acting as the CRA (Consumer Reporting Agency). If an individual account is included in the report - for example, with an individual acting as an personal guarantor on the loan - then this version of the report should be used. In case of an adverse action on the loan where the decision was based on this report, then the borrower can be referred to the [Finicity Consumer Portal](https://consumer.finicityreports.com) where they can view this report and submit a dispute if they feel any information in this report is inaccurate.\n\nBefore calling this API, a consumer must be created for the given customer ID (see Consumers APIs).\n\nIf no account type of checking or savings is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateCashFlowAnalytics
+  method: POST
+  url: https://api.finicity.com/analytics/cashflow/v1/customer/{customerId}
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "accountIds": [
+
+          3
+
+        ],
+
+        "lengthOfReport": 730
+
+      }
+  parameters:
+  - name: reference-number
+    value: abc123
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key42
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token65
+    disabled: false
+  _type: request
+  _id: req_364614e21ee94e5fbad6c6baebabad15
+  parentId: fld_ca14a252acce4a46bae84e1512f694bb
+  description: "Cash Flow Analytics for Business analyzes cash flow over time to report metrics and identify behavior that may indicate risk.\n\nCalculated metrics include:\n* Average transaction value by month over the requested time period\n* Net cash flow over the requested time period and broken down by month\n* Count and report of weeks in the requested time period where there\n  were zero transactions posted to the customer's accounts\n\n* Minimum/maximum/average/sum/count of deposits by month\n* Minimum/maximum/average/sum/count of withdrawals by month\n* Estimated amount of deposits that can be classified as business\n  revenue\n\n* Number of transactions posted incurring a non-sufficient funds (NSF)\n  fee, and net amount charged in NSF fees\n\n\nThis version of the API is intended for piloting and integration testing your application with the Cash Flow Analytics product. It does not adhere to FCRA requirements, and should not be used for production/lending purposes. See _Generate Cash Flow Analytics - FCRA_ for the FCRA compliant version of this API.\n\nA successful call to this API will generate analytics and store a report within Finicity. The report can be retrieved via _Get Cash Flow Analytics Report_ (operation: _GetCashFlowAnalyticsReport_).\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateCashFlowAnalyticsFcra
+  method: POST
+  url: https://api.finicity.com/analytics/cashflow/v1/customer/{customerId}/fcra
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "accountIds": [
+
+          3
+
+        ],
+
+        "lengthOfReport": 730
+
+      }
+  parameters:
+  - name: reference-number
+    value: abc123
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key97
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token2
+    disabled: false
+  _type: request
+  _id: req_4ef13209f3b04c66a81a26728be7d94e
+  parentId: fld_ca14a252acce4a46bae84e1512f694bb
+  description: "Cash Flow Analytics for Business analyzes cash flow over time to report metrics and identify behavior that may indicate risk.\n\nCalculated metrics include:\n* Average transaction value by month over the requested time period\n* Net cash flow over the requested time period and broken down by month\n* Count and report of weeks in the requested time period where there\n  were zero transactions posted to the customer's accounts\n\n* Minimum/maximum/average/sum/count of deposits by month\n* Minimum/maximum/average/sum/count of withdrawals by month\n* Estimated amount of deposits that can be classified as business\n  revenue\n\n* Number of transactions posted incurring a non-sufficient funds (NSF)\n  fee, and net amount charged in NSF fees\n\n\nThis version of the API is intended for production use. It maintains and enforces all compliance with FCRA rules and requirements.\n\n*Note:* this is a premium service, billable per every successful API call for non-testing customers.\n\nA successful call to this API will generate analytics and store a report within Finicity. The report can be retrieved via _Get Cash Flow Analytics Report - FCRA_ (operation: _GetCashFlowAnalyticsReportFCRA_).\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateConnectUrl
+  method: POST
+  url: https://api.finicity.com/connect/v2/generate
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "partnerId": "1234583871234",
+
+        "customerId": "1005061234",
+
+        "language": "fr-CA",
+
+        "consumerId": "0bf46322c167b562e6cbed9d40e19a4c",
+
+        "redirectUri": "https://www.finicity.com/connect/",
+
+        "webhook": "https://webhook.site/8d4421a7-d1d1-4f01-bb08-5370aff0321b",
+
+        "webhookContentType": "application/json",
+
+        "webhookData": {},
+
+        "webhookHeaders": {
+
+          "webhookHeaders0": "webhookHeaders67",
+
+          "webhookHeaders1": "webhookHeaders45"
+
+        },
+
+        "optionalConsumerInfo": {
+
+          "ssn": "999999999",
+
+          "dob": 1607450357
+
+        },
+
+        "singleUseUrl": true,
+
+        "experience": "default",
+
+        "institutionSettings": {
+
+          "institutionSettings0": "institutionSettings19"
+
+        },
+
+        "fromDate": 1607450357,
+
+        "reportCustomFields": [
+
+          {
+
+            "label": "loanID",
+
+            "value": "123456",
+
+            "shown": true
+
+          }
+
+        ]
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key91
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token64
+    disabled: false
+  _type: request
+  _id: req_b8e40f1664384e8aaa93f4a2168bedf2
+  parentId: fld_1156617dceb043e6ac2d6c19c7292800
+  description: "Generate a Connect 2.0 URL link to add within your own applications.\n\nIn option, use the `experience` parameter to call Connect (per session) in the body of the request. Configure the `experience` parameter to change the brand color, logo, icon, which credit decisioning report to generate when the Connect application completes, and more.\n\nNote: contact your Sales Account Team to set up the `experience` parameter.\n\nMVS Developers: You can pre-populate the consumer's SSN on the \"Find employment records\" page at the beginning of the MVS payroll app. Pass the SSN value for the consumer in the body of the request call.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateLiteConnectUrl
+  method: POST
+  url: https://api.finicity.com/connect/v2/generate/lite
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "partnerId": "1234583871234",
+
+        "customerId": "1005061234",
+
+        "institutionId": 4222,
+
+        "language": "fr-CA",
+
+        "redirectUri": "https://www.finicity.com/connect/",
+
+        "webhook": "https://webhook.site/8d4421a7-d1d1-4f01-bb08-5370aff0321b",
+
+        "webhookContentType": "application/json",
+
+        "webhookData": {},
+
+        "webhookHeaders": {
+
+          "webhookHeaders0": "webhookHeaders86",
+
+          "webhookHeaders1": "webhookHeaders12",
+
+          "webhookHeaders2": "webhookHeaders58"
+
+        },
+
+        "experience": "default",
+
+        "singleUseUrl": true
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key15
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token51
+    disabled: false
+  _type: request
+  _id: req_ccb51f8d636f486f8a60736d3fee611c
+  parentId: fld_1156617dceb043e6ac2d6c19c7292800
+  description: "Connect Lite is a variation of Connect Full (`POST /connect/v2/generate`), which has a limited set of features.\n* Sign in, user's credentials, and Multi-Factor Authentication (MFA)\n* No user account management\n\nThe Connect Web SDK isn't a requirement when using Connect lite. However, if you want to use the SDK events, routes, and user events, then you must integrate with the Connect Web SDK.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateFixConnectUrl
+  method: POST
+  url: https://api.finicity.com/connect/v2/generate/fix
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "partnerId": "1234583871234",
+
+        "customerId": "1005061234",
+
+        "institutionLoginId": "1007302745",
+
+        "language": "fr-CA",
+
+        "redirectUri": "https://www.finicity.com/connect/",
+
+        "webhook": "https://webhook.site/8d4421a7-d1d1-4f01-bb08-5370aff0321b",
+
+        "webhookContentType": "application/json",
+
+        "webhookData": {},
+
+        "webhookHeaders": {},
+
+        "experience": "default",
+
+        "singleUseUrl": true
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key57
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token80
+    disabled: false
+  _type: request
+  _id: req_e917cc6f3b8d4116b6af060e13c24d7c
+  parentId: fld_1156617dceb043e6ac2d6c19c7292800
+  description: "Use the Connect Fix API when the following conditions occur:\n* The connection to the user's financial institution is lost\n* The user's credentials were updated (for any number of reasons)\n* The user's MFA challenge has expired\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: SendConnectEmail
+  method: POST
+  url: https://api.finicity.com/connect/v2/send/email
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "partnerId": "1234583871234",
+
+        "customerId": "1005061234",
+
+        "consumerId": "0bf46322c167b562e6cbed9d40e19a4c",
+
+        "email": {
+
+          "to": "alex.salido@finicity.com",
+
+          "from": "test.lender@test.com",
+
+          "supportPhone": "800-555-5555",
+
+          "subject": "Verify your income",
+
+          "firstName": "Bob",
+
+          "institutionName": "Acme Lending",
+
+          "institutionAddress": "222 Winipeg Drive SLC UT, 84109",
+
+          "signature": [
+
+            "Cindy Mayfield",
+
+            "Senior Loan Officer",
+
+            "Direct 123-456-7890"
+
+          ]
+
+        },
+
+        "language": "fr-CA",
+
+        "redirectUri": "https://www.finicity.com/connect/",
+
+        "webhook": "https://webhook.site/8d4421a7-d1d1-4f01-bb08-5370aff0321b",
+
+        "webhookContentType": "application/json",
+
+        "webhookData": {
+
+          "webhookData0": "webhookData70",
+
+          "webhookData1": "webhookData39"
+
+        },
+
+        "webhookHeaders": {},
+
+        "institutionSettings": {},
+
+        "experience": "default",
+
+        "singleUseUrl": true,
+
+        "fromDate": 1607450357,
+
+        "reportCustomFields": [
+
+          {
+
+            "label": "loanID",
+
+            "value": "123456",
+
+            "shown": true
+
+          }
+
+        ],
+
+        "optionalConsumerInfo": {
+
+          "ssn": "999999999",
+
+          "dob": 1607450357
+
+        }
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key21
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token23
+    disabled: false
+  _type: request
+  _id: req_cc9121ec1d364c4c856122bf2aa1f7fb
+  parentId: fld_1156617dceb043e6ac2d6c19c7292800
+  description: "Same as Connect Full (`POST /connect/v2/generate`) but send a Connect email to a consumer.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateJointBorrowerConnectUrl
+  method: POST
+  url: https://api.finicity.com/connect/v2/generate/jointBorrower
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "partnerId": "1234583871234",
+
+        "borrowers": [
+
+          {
+
+            "customerId": "1005061234",
+
+            "consumerId": "0bf46322c167b562e6cbed9d40e19a4c",
+
+            "type": "primary",
+
+            "optionalConsumerInfo": {
+
+              "ssn": "999999999",
+
+              "dob": 1607450357
+
+            }
+
+          }
+
+        ],
+
+        "language": "fr-CA",
+
+        "redirectUri": "https://www.finicity.com/connect/",
+
+        "webhook": "https://webhook.site/8d4421a7-d1d1-4f01-bb08-5370aff0321b",
+
+        "webhookContentType": "application/json",
+
+        "webhookData": {},
+
+        "webhookHeaders": {},
+
+        "institutionSettings": {
+
+          "institutionSettings0": "institutionSettings4",
+
+          "institutionSettings1": "institutionSettings78",
+
+          "institutionSettings2": "institutionSettings49"
+
+        },
+
+        "experience": "default",
+
+        "fromDate": 1607450357,
+
+        "reportCustomFields": [
+
+          {
+
+            "label": "loanID",
+
+            "value": "123456",
+
+            "shown": true
+
+          }
+
+        ],
+
+        "singleUseUrl": true
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key30
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token65
+    disabled: false
+  _type: request
+  _id: req_45e39566fcc54abc8313b40a1205ef58
+  parentId: fld_1156617dceb043e6ac2d6c19c7292800
+  description: "Same as Connect Full (`POST /connect/v2/generate`) but for joint borrowers.\n\nMVS prompts both the primary and joint borrower to enter each of their financial, payroll, and paystub information in the same Connect session.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: SendJointBorrowerConnectEmail
+  method: POST
+  url: https://api.finicity.com/connect/v2/send/email/jointBorrower
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "partnerId": "1234583871234",
+
+        "borrowers": [
+
+          {
+
+            "customerId": "1005061234",
+
+            "consumerId": "0bf46322c167b562e6cbed9d40e19a4c",
+
+            "type": "primary",
+
+            "optionalConsumerInfo": {
+
+              "ssn": "999999999",
+
+              "dob": 1607450357
+
+            }
+
+          }
+
+        ],
+
+        "email": {
+
+          "to": "alex.salido@finicity.com",
+
+          "from": "test.lender@test.com",
+
+          "supportPhone": "800-555-5555",
+
+          "subject": "Verify your income",
+
+          "firstName": "Bob",
+
+          "institutionName": "Acme Lending",
+
+          "institutionAddress": "222 Winipeg Drive SLC UT, 84109",
+
+          "signature": [
+
+            "Cindy Mayfield",
+
+            "Senior Loan Officer",
+
+            "Direct 123-456-7890"
+
+          ]
+
+        },
+
+        "experience": "default",
+
+        "language": "fr-CA",
+
+        "redirectUri": "https://www.finicity.com/connect/",
+
+        "webhook": "https://webhook.site/8d4421a7-d1d1-4f01-bb08-5370aff0321b",
+
+        "webhookContentType": "application/json",
+
+        "webhookData": {
+
+          "webhookData0": "webhookData90"
+
+        },
+
+        "webhookHeaders": {},
+
+        "institutionSettings": {},
+
+        "fromDate": 1607450357,
+
+        "reportCustomFields": [
+
+          {
+
+            "label": "loanID",
+
+            "value": "123456",
+
+            "shown": true
+
+          }
+
+        ],
+
+        "singleUseUrl": true
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key85
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token49
+    disabled: false
+  _type: request
+  _id: req_a17560c8b8db4a068554a675782225aa
+  parentId: fld_1156617dceb043e6ac2d6c19c7292800
+  description: "Same as Connect Joint Borrower (`POST /connect/v2/generate/jointBorrower`) but send a Connect email  to at least one of the joint borrower's email addresses. \n\nWhen the consumer opens the email, MVS prompts both the primary and joint borrower to enter each of their financial, payroll, and paystub information in the same Connect session.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: CreateConsumer
+  method: POST
+  url: https://api.finicity.com/decisioning/v1/customers/{customerId}/consumer
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "firstName": "John",
+
+        "lastName": "Smith",
+
+        "address": "434 W Ascension Way",
+
+        "city": "Murray",
+
+        "state": "UT",
+
+        "zip": "84123",
+
+        "phone": "1-800-986-3343",
+
+        "ssn": "999-99-9999",
+
+        "birthday": {
+
+          "year": 1989,
+
+          "month": 8,
+
+          "dayOfMonth": 13
+
+        },
+
+        "email": "finicity@test.com",
+
+        "suffix": "Mr"
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key37
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token20
+    disabled: false
+  _type: request
+  _id: req_8fcdecbc5624477582b6e4a5328b109c
+  parentId: fld_214ad25123f24a97b825797ed1b1c6c0
+  description: "Create a consumer record associated with the given customer. A consumer persists as the owner of any reports that are generated, even after the original customer is deleted from the system.\n\nA consumer must be created for the given customer before calling any of the Generate Report services.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetConsumerForCustomer
+  method: GET
+  url: https://api.finicity.com/decisioning/v1/customers/{customerId}/consumer
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key72
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token4
+    disabled: false
+  _type: request
+  _id: req_d3fa834143454e069f04e24fe4f6de5e
+  parentId: fld_214ad25123f24a97b825797ed1b1c6c0
+  description: "Get the details of a consumer record by customer ID.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetConsumer
+  method: GET
+  url: https://api.finicity.com/decisioning/v1/consumers/{consumerId}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key54
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token0
+    disabled: false
+  _type: request
+  _id: req_f8666fb6f35d482dbb26bc6b2ac5849e
+  parentId: fld_214ad25123f24a97b825797ed1b1c6c0
+  description: "Get the details of a consumer record by consumer ID.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: ModifyConsumer
+  method: PUT
+  url: https://api.finicity.com/decisioning/v1/consumers/{consumerId}
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "firstName": "John",
+
+        "lastName": "Smith",
+
+        "address": "434 W Ascension Way",
+
+        "city": "Murray",
+
+        "state": "UT",
+
+        "zip": "84123",
+
+        "phone": "1-800-986-3343",
+
+        "ssn": "999-99-9999",
+
+        "birthday": {
+
+          "year": 1989,
+
+          "month": 8,
+
+          "dayOfMonth": 13
+
+        },
+
+        "email": "finicity@test.com",
+
+        "suffix": "Mr"
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key54
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token12
+    disabled: false
+  _type: request
+  _id: req_a6e0b0c6779e4bcaada2e4c60e9713d6
+  parentId: fld_214ad25123f24a97b825797ed1b1c6c0
+  description: "Modify an existing consumer. All fields are required for a consumer record, but individual fields for this call are optional because fields that are not specified will be left unchanged.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: AddTestingCustomer
+  method: POST
+  url: https://api.finicity.com/aggregation/v2/customers/testing
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "username": "customerusername1",
+
+        "firstName": "John",
+
+        "lastName": "Smith",
+
+        "applicationId": "123456789"
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key26
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token16
+    disabled: false
+  _type: request
+  _id: req_a4093e9b69da48e2b30ab7b954be9eac
+  parentId: fld_9ebed99bcdde40b681ebbf1d26801b20
+  description: "Enroll a testing customer ([Test Drive](https://signup.finicity.com/) accounts).\n\nFor using testing customers with FinBank OAuth, you must register a test application with your systems engineer or account manager. Then, use that testing `applicationId` when creating testing customers.\n\nTesting Customers can access FinBank profiles (except \"FinBank Billable\" profiles), and cannot access live financial institutions.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: AddCustomer
+  method: POST
+  url: https://api.finicity.com/aggregation/v2/customers/active
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "username": "customerusername1",
+
+        "firstName": "John",
+
+        "lastName": "Smith",
+
+        "applicationId": "123456789"
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key93
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token48
+    disabled: false
+  _type: request
+  _id: req_57766ccbde374dcba0242839ed1edccc
+  parentId: fld_9ebed99bcdde40b681ebbf1d26801b20
+  description: "Enroll an active customer, which is the actual owner of one or more real-world accounts. This is a billable customer.\n\nActive customers must use the \"FinBank Billable\" profiles for testing purposes. \n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetCustomers
+  method: GET
+  url: https://api.finicity.com/aggregation/v1/customers
+  parameters:
+  - name: username
+    value: customerusername1
+    disabled: false
+  - name: type
+    value: active
+    disabled: false
+  - name: search
+    value: searchvalue
+    disabled: false
+  - name: start
+    value: '1'
+    disabled: false
+  - name: limit
+    value: '25'
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key22
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token31
+    disabled: false
+  _type: request
+  _id: req_5a3757126f5c4e54a4c8ac256dcdf405
+  parentId: fld_9ebed99bcdde40b681ebbf1d26801b20
+  description: "Find all customers enrolled by the current partner, where the search text is found in the customer's username or any combination of `firstName` and `lastName` fields. If no search text is provided, all customers will be returned.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetCustomerWithAppData
+  method: GET
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/application
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key9
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token9
+    disabled: false
+  _type: request
+  _id: req_2d282ae3b1b24ede8ef55d8f5d263c7b
+  parentId: fld_9ebed99bcdde40b681ebbf1d26801b20
+  description: "Retrieve a customer along with additional details about the OAuth application.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetCustomer
+  method: GET
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key33
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token90
+    disabled: false
+  _type: request
+  _id: req_ec3ae1c6f6a146ffa26ea5e4f61ae044
+  parentId: fld_9ebed99bcdde40b681ebbf1d26801b20
+  description: "Retrieve a customer by ID.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: ModifyCustomer
+  method: PUT
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "firstName": "John",
+
+        "lastName": "Smith"
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key70
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token34
+    disabled: false
+  _type: request
+  _id: req_befae7dd397b4d94939c0cc9a97a1069
+  parentId: fld_9ebed99bcdde40b681ebbf1d26801b20
+  description: "Modify an enrolled customer by ID.\n\nYou must specify either `firstName`, `lastName`, or both in the request.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: DeleteCustomer
+  method: DELETE
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key68
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token1
+    disabled: false
+  _type: request
+  _id: req_4aef7a6caa90433aa701b308b3176691
+  parentId: fld_9ebed99bcdde40b681ebbf1d26801b20
+  description: "Completely remove a customer from the system. This will remove the customer and all associated accounts and transactions.\n\n⚠️ Use this service carefully! It will not pause for confirmation before performing the operation!\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetCertifiedInstitutionsWithRSSD
+  method: GET
+  url: https://api.finicity.com/institution/v2/certifiedInstitutions/rssd
+  parameters:
+  - name: search
+    value: finbank
+    disabled: false
+  - name: start
+    value: '1'
+    disabled: false
+  - name: limit
+    value: '25'
+    disabled: false
+  - name: type
+    value: voa
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key94
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token6
+    disabled: false
+  _type: request
+  _id: req_7ba61ca50fec41b3ba6f2e26d0c8f8c1
+  parentId: fld_078ec942c4c04efaa550310e3a1359d2
+  description: "Search for certified financial institutions w/RSSD.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetInstitutions
+  method: GET
+  url: https://api.finicity.com/institution/v2/institutions
+  parameters:
+  - name: search
+    value: finbank
+    disabled: false
+  - name: start
+    value: '1'
+    disabled: false
+  - name: limit
+    value: '25'
+    disabled: false
+  - name: type
+    value: voa
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key7
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token7
+    disabled: false
+  _type: request
+  _id: req_66fdc172494b459d97090b6bf1a5e5c3
+  parentId: fld_078ec942c4c04efaa550310e3a1359d2
+  description: "Search for financial institutions.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetCertifiedInstitutions
+  method: GET
+  url: https://api.finicity.com/institution/v2/certifiedInstitutions
+  parameters:
+  - name: search
+    value: finbank
+    disabled: false
+  - name: start
+    value: '1'
+    disabled: false
+  - name: limit
+    value: '25'
+    disabled: false
+  - name: type
+    value: voa
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key33
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token38
+    disabled: false
+  _type: request
+  _id: req_54cdecdb256447c689a620efab5133c1
+  parentId: fld_078ec942c4c04efaa550310e3a1359d2
+  description: "Search for financial institutions by certified product.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetInstitution
+  method: GET
+  url: https://api.finicity.com/institution/v2/institutions/{institutionId}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key97
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token28
+    disabled: false
+  _type: request
+  _id: req_9feb8ffec27c4fea80ef5917b833d714
+  parentId: fld_078ec942c4c04efaa550310e3a1359d2
+  description: "Get financial institution details by ID.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetInstitutionBranding
+  method: GET
+  url: https://api.finicity.com/institution/v2/institutions/{institutionId}/branding
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key42
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token62
+    disabled: false
+  _type: request
+  _id: req_750dac9dd4cd4dbcbd7eb45888ace081
+  parentId: fld_078ec942c4c04efaa550310e3a1359d2
+  description: "Return the branding information for a financial institution.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: StoreCustomerPayStatement
+  method: POST
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/payStatements
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "label": "lastPayPeriod",
+
+        "statement": "VGhpcyBtdXN0IGJlIGFuIGltYWdl"
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key68
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token90
+    disabled: false
+  _type: request
+  _id: req_cb69054e682341468fdc4a2fd4158b9c
+  parentId: fld_45bc3ee4c3f748e399b1b881c7ff5e61
+  description: "Upload pay statements for a customer.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetAccountOwner
+  method: GET
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/accounts/{accountId}/owner
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key18
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token32
+    disabled: false
+  _type: request
+  _id: req_df351de3e93e41b78b2e7a75ca0c5304
+  parentId: fld_e2a98ef102564a3a9a997215a444610f
+  description: "Retrieve the names and addresses of the account owner from a financial institution.\n\nNote: this is a premium service, billable per every successful API call.\n\nThis service retrieves account data from the institution. This usually returns quickly, but in some scenarios may take a few minutes to complete. In the event of a timeout condition, retry the call.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetLoanPaymentDetails
+  method: GET
+  url: https://api.finicity.com/aggregation/v2/customers/{customerId}/accounts/{accountId}/loanDetails
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key77
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token19
+    disabled: false
+  _type: request
+  _id: req_04d65ea0d1dc41608e0fe8ff82584dbb
+  parentId: fld_e2a98ef102564a3a9a997215a444610f
+  description: "Return the loan payment details of the customer for a loan-type account.\n\nNote: this is a premium service, billable per every successful API call.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetAccountACHDetails
+  method: GET
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/accounts/{accountId}/details
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key6
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token35
+    disabled: false
+  _type: request
+  _id: req_61697f4a8e23439ab470e6b2c1a6aa34
+  parentId: fld_e2a98ef102564a3a9a997215a444610f
+  description: "Return the real account number and routing number details for an ACH payment.\n\nNote: this is a premium service, billable per every successful API call.\n\n_Supported account types_: \"checking\", \"savings\", \"moneyMarket\", \"loan\"\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetAvailableBalanceLive
+  method: GET
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/accounts/{accountId}/availableBalance/live
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key17
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token5
+    disabled: false
+  _type: request
+  _id: req_08363a5c6fe640888fbbf1b2f04685a7
+  parentId: fld_e2a98ef102564a3a9a997215a444610f
+  description: "Retrieve the available and cleared account balances for a single account in real-time directly from a financial institution.\n\nNote: this is a premium service, billable per every successful API call.\n\n_Supported account types_: \"checking\", \"savings\", \"moneyMarket\", \"cd\"\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetAvailableBalance
+  method: GET
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/accounts/{accountId}/availableBalance
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key10
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token35
+    disabled: false
+  _type: request
+  _id: req_a846afcb0b93448ab5a999ad458c5e7a
+  parentId: fld_e2a98ef102564a3a9a997215a444610f
+  description: "Retrieve the latest cached available and cleared account balances for a customer. Since we update and store balances throughout the day, this is the most accurate balance information available when a connection to a financial institution is unavailable or when a faster response is needed. Only deposit account types are supported: Checking, Savings, Money Market, and CD.\n\nNote: this is a premium service, billable per every successful API call. Enrollment is required.        \n\n_Supported account types_: \"checking\", \"savings\", \"moneyMarket\", \"cd\"\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetPortfolioByCustomer
+  method: GET
+  url: https://api.finicity.com/decisioning/v1/customers/{customerId}/portfolios/{portfolioId}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key89
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token15
+    disabled: false
+  _type: request
+  _id: req_ff481ab8e3c241fda5cb65518e40c5ba
+  parentId: fld_2b2e9e2b922d4d62b73bbbce136090a6
+  description: "Return a portfolio of most recently generated reports for each report type for the given customer. If there are multiple reports that were generated for a report type (VOA, VOI, etc.), only the most recently generated report for the type will be returned.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)\n"
+- name: GetPortfolioByConsumer
+  method: GET
+  url: https://api.finicity.com/decisioning/v1/consumers/{consumerId}/portfolios/{portfolioId}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key52
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token57
+    disabled: false
+  _type: request
+  _id: req_4eb40930683f4f7dae30edc646e6d621
+  parentId: fld_2b2e9e2b922d4d62b73bbbce136090a6
+  description: "Return a portfolio of most recently generated reports for each report type for a given consumer. If there are multiple reports that were generated for a report type (VOA, VOI, etc.), only the most recently generated report for the type will be returned.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetReportByCustomer
+  method: GET
+  url: https://api.finicity.com/decisioning/v3/customers/{customerId}/reports/{reportId}
+  parameters:
+  - name: onBehalfOf
+    value: Some entity
+    disabled: false
+  - name: purpose
+    value: '99'
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key97
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token55
+    disabled: false
+  _type: request
+  _id: req_300a759787fb4e6ea16476ac12551fc0
+  parentId: fld_3e48b58d35254cb7a46e5df90f874e93
+  description: "Get a report that has been generated by a previous call to one of the Generate Report services.\n\nThe report's `status` field contains \"inProgress\", \"failure\", or \"success\". If the status shows \"inProgress\", the client app should wait 20 seconds and then call this API again.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetReportByConsumer
+  method: GET
+  url: https://api.finicity.com/decisioning/v3/consumers/{consumerId}/reports/{reportId}
+  parameters:
+  - name: purpose
+    value: '99'
+    disabled: false
+  - name: onBehalfOf
+    value: Some entity
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key26
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token30
+    disabled: false
+  _type: request
+  _id: req_9a82e68792f245b9b3ec2a9cf187f3dc
+  parentId: fld_3e48b58d35254cb7a46e5df90f874e93
+  description: "Get a report that has been generated by a previous call to one of the Generate Report services.\n\nThe report's `status` field contains \"inProgress\", \"failure\", or \"success\". If the status shows \"inProgress\", the client app should wait 20 seconds and then call this API again.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetReportsByCustomerId
+  method: GET
+  url: https://api.finicity.com/decisioning/v1/customers/{customerId}/reports
+  parameters:
+  - name: purpose
+    value: '99'
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key20
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token16
+    disabled: false
+  _type: request
+  _id: req_95b72852d0f0441fa88566fb08610ed6
+  parentId: fld_3e48b58d35254cb7a46e5df90f874e93
+  description: "Get all reports that have been generated by previous calls to Generate Report services for the given customer.\n\nThe `status` fields in the returned list contain \"inProgress\", \"failure\", or \"success\". If the status shows \"inProgress\", the client app should wait 20 seconds and then call this API again.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetReportsByConsumerId
+  method: GET
+  url: https://api.finicity.com/decisioning/v1/consumers/{consumerId}/reports
+  parameters:
+  - name: purpose
+    value: '99'
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key34
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token86
+    disabled: false
+  _type: request
+  _id: req_dbdba308243440c0be82cafe38c0b83d
+  parentId: fld_3e48b58d35254cb7a46e5df90f874e93
+  description: "Get all reports that have been generated by previous calls to Generate Report services for the given consumer.\n\nThe `status` fields in the returned list contain \"inProgress\", \"failure\", or \"success\". If the status shows \"inProgress\", the client app should wait 20 seconds and then call this API again.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: LoadHistoricTransactionsForCustomerAccount
+  method: POST
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/accounts/{accountId}/transactions/historic
+  body:
+    mimeType: application/json
+    text: any
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key28
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token86
+    disabled: false
+  _type: request
+  _id: req_1c1c5dacc8cf4e13bf13c980dc2d551b
+  parentId: fld_af4dcff211724b47a4689dfc8352f4dd
+  description: "Connect to the account's financial institution and load up to 24 months of historic transactions for the account. Length of history varies by institution.\n\nThis is a premium service. The billable event is a call to this service specifying a customer ID that has not been seen before by this service. (If this service is called multiple times with the same customer ID, to load transactions from multiple accounts, only one billable event has occurred.)\n\nThe recommended timeout setting for this request is 180 seconds in order to receive a response. However, you can terminate the connection after making the call the operation will still complete. You will have to pull the account records to check for an updated aggregation attempt date to know when the refresh is complete.\n\nThe date range sent to the institution is calculated from the account's `createdDate`. This means that calling this service a second time for the same account normally will not add any new transactions for the account. For this reason, a second call to this service for a known account ID will usually return immediately.\n\nIn a few specific scenarios, it may be desirable to force a second connection to the institution for a known account ID. Some examples are:\n\n* The institution's policy has changed, making more transactions available\n* Finicity has now added a longer transaction history support for the institution\n* The first call encountered an error, and the resulting Aggregation Ticket has now been fixed by the Finicity Support Team\n\nIn these cases, the POST request can contain the parameter `force=true` in the request body to force the second connection.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetAllCustomerTransactions
+  method: GET
+  url: https://api.finicity.com/aggregation/v3/customers/{customerId}/transactions
+  parameters:
+  - name: fromDate
+    value: '1607450357'
+    disabled: false
+  - name: toDate
+    value: '1607450357'
+    disabled: false
+  - name: start
+    value: '1'
+    disabled: false
+  - name: limit
+    value: '25'
+    disabled: false
+  - name: sort
+    value: desc
+    disabled: false
+  - name: includePending
+    value: 'false'
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key80
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token69
+    disabled: false
+  _type: request
+  _id: req_138a386bd74d455ea7aee843266bdeac
+  parentId: fld_af4dcff211724b47a4689dfc8352f4dd
+  description: "Get all transactions available for this customer within the given date range, across all accounts. This service supports paging and sorting by `transactionDate` (or `postedDate` if no transaction date is provided), with a maximum of 1000 transactions per request.\n\nStandard consumer aggregation provides up to 180 days of transactions prior to the date each account was added to the Finicity system. To access older transactions, you must first call the service Load Historic Transactions for Account.\n\nThere is no limit for the size of the window between `fromDate` and `toDate`, however, the maximum number of transactions returned on one page is 1000.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetCustomerTransaction
+  method: GET
+  url: https://api.finicity.com/aggregation/v2/customers/{customerId}/transactions/{transactionId}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key0
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token50
+    disabled: false
+  _type: request
+  _id: req_bc48d8526bb64b93b3ae68727f6d0ddc
+  parentId: fld_af4dcff211724b47a4689dfc8352f4dd
+  description: "Get details for the given transaction.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GetCustomerAccountTransactions
+  method: GET
+  url: https://api.finicity.com/aggregation/v4/customers/{customerId}/accounts/{accountId}/transactions
+  parameters:
+  - name: fromDate
+    value: '1607450357'
+    disabled: false
+  - name: toDate
+    value: '1607450357'
+    disabled: false
+  - name: start
+    value: '1'
+    disabled: false
+  - name: limit
+    value: '25'
+    disabled: false
+  - name: sort
+    value: desc
+    disabled: false
+  - name: includePending
+    value: 'false'
+    disabled: false
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key33
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token67
+    disabled: false
+  _type: request
+  _id: req_bffc3e7e0c4a4ea8a136f90ee8343c01
+  parentId: fld_af4dcff211724b47a4689dfc8352f4dd
+  description: "Get all transactions available for this customer account within the given date range. This service supports paging and sorting by `transactionDate` (or `postedDate` if no transaction date is provided), with a maximum of 1000 transactions per request.\n\nStandard consumer aggregation provides up to 180 days of transactions prior to the date each account was added to the Finicity system. To access older transactions, you must first call the Cash Flow Verification service Load Historic Transactions for Account.\n\nThere is no limit for the size of the window between `fromDate` and `toDate`, however, the maximum number of transactions returned on one page is 1000.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateTransactionsReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/transactions
+  body:
+    mimeType: application/json
+    text: '{"accountIds":"1027339038 1027339039","reportCustomFields":[{"label":"loanID","value":"12345","shown":true},{"label":"trackingID","value":"5555","shown":true},{"label":"loanType","value":"car","shown":false},{"label":"vendorID","value":"1613aa23","shown":true},{"label":"vendorName","value":"PSC Finance","shown":false}],"fromDate":1580558400}'
+  parameters:
+  - name: toDate
+    value: '1607450357'
+    disabled: false
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  - name: includePending
+    value: 'false'
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key77
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token43
+    disabled: false
+  _type: request
+  _id: req_ec7b8bb5cc0f4c37b3acf92a50882c85
+  parentId: fld_af4dcff211724b47a4689dfc8352f4dd
+  description: "Generate a Transaction Report for the given accounts under the given customer. This service retrieves up to 24 months of transaction history for the given customer. It then uses this information to generate the Transaction Report.\n\nThis is a premium service. A billable event will be created upon the successful generation of the Transactions Report. \n\nBefore calling this API, a consumer must be created for the given customer ID (see Consumers APIs).\n\nThere cannot be more than 24 months between `fromDate` and `toDate`.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: SubscribeToTxPushNotifications
+  method: POST
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/accounts/{accountId}/txpush
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "callbackUrl": "https://www.mydomain.com/txpush/listener"
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key71
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token81
+    disabled: false
+  _type: request
+  _id: req_8f1de30d0438436f91f69865f60cb49e
+  parentId: fld_684a6296275049719a1a1aa385e210dc
+  description: "Register a client app's TxPush Listener to receive TxPush notifications related to the given account.\n\nEach call to this service will return two records, one with class account and one with class transaction. Account events are sent when values change in the account's fields (such as `balance` or `interestRate`). Transaction events are sent whenever a new transaction is posted for the account. For institutions that do not provide TxPush services, notifications are sent as soon as Finicity finds a new transaction or new account data through regular aggregation processes.\n\nThe listener's URL must be secure (HTTPS) for any real-world account. In addition, the client's TxPush Listener will need to be verified. HTTP and HTTPS connections are only allowed on the standard ports 80 (HTTP) and 443 (HTTPS). The use of other ports will result with the call failing.\n\nFor additional details on this process, see [TxPush Listener Service](https://docs.finicity.com/txpush-listener-service/).\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: DisableTxPushNotifications
+  method: DELETE
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/accounts/{accountId}/txpush
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key93
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token53
+    disabled: false
+  _type: request
+  _id: req_46289443f2f44cb69f85e05d37f1936f
+  parentId: fld_684a6296275049719a1a1aa385e210dc
+  description: "Delete all TxPush subscriptions with their notifications for the given account. No more notifications will be sent for account or transaction events.\n\nFor additional details on this process, see [TxPush Listener Service](https://docs.finicity.com/txpush-listener-service/).\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: CreateTxPushTestTransaction
+  method: POST
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/accounts/{accountId}/transactions
+  body:
+    mimeType: application/json
+    text: >-
+      {
+
+        "amount": -4.25,
+
+        "description": "a testing transaction description",
+
+        "transactionDate": 1607450357,
+
+        "status": "pending",
+
+        "postedDate": 1607450357
+
+      }
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key79
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token32
+    disabled: false
+  _type: request
+  _id: req_21d7dc93ad174bc59ae2981cdb5c4dd3
+  parentId: fld_684a6296275049719a1a1aa385e210dc
+  description: "Inject a transaction into the transaction list for a testing account. This allows an app to trigger TxPush notifications for the account in order to test the app's TxPush Listener service. This causes the platform to send one transaction event and one account event (showing that the account balance has changed). This service is only supported for testing accounts.\n\nFor additional details on this process, see [TxPush Listener Service](https://docs.finicity.com/txpush-listener-service/).\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: DeleteTxPushSubscription
+  method: DELETE
+  url: https://api.finicity.com/aggregation/v1/customers/{customerId}/subscriptions/{subscriptionId}
+  headers:
+  - name: Finicity-App-Key
+    value: Finicity-App-Key77
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token65
+    disabled: false
+  _type: request
+  _id: req_20f823df96804471b21db992c5d4eacb
+  parentId: fld_684a6296275049719a1a1aa385e210dc
+  description: "Delete a specific subscription to TxPush notifications for the given account. This could be individual deleting the account or transactions events. No more events will be sent for that specific subscription.\n\nFor additional details on this process, see [TxPush Listener Service](https://docs.finicity.com/txpush-listener-service/).\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateVOAReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/voa
+  body:
+    mimeType: application/json
+    text: '{"accountIds":"1000535275","reportCustomFields":[{"label":"loanID","value":"12345","shown":true},{"label":"trackingID","value":"5555","shown":true},{"label":"loanType","value":"car","shown":false},{"label":"vendorID","value":"1613aa23","shown":true},{"label":"vendorName","value":"PSC Finance","shown":false}],"showNsf":false,"fromDate":1580558400}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key51
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token98
+    disabled: false
+  _type: request
+  _id: req_3fe9a9f17f2c4996859e3d1afc88c775
+  parentId: fld_0e7d9d3743c343eb93fb3c4dc7ebfe91
+  description: "Generate a Verification of Assets (VOA) report for all checking, savings, money market, and investment accounts for the given customer. This service retrieves up to twelve months of transaction history for each account and uses this information to generate the VOA report.\n\nThis is a premium service. The billing rate is the variable rate for Verification of Assets under the current subscription plan. The billable event is the successful generation of a VOA report.\n\nBefore calling this API, a consumer must be created for the given customer ID (see Consumers APIs).\n\nIf no account of type checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateVOAWithIncomeReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/voaHistory
+  body:
+    mimeType: application/json
+    text: '{"accountIds":"1000535275","fromDate":1580558400,"reportCustomFields":[{"label":"loanID","value":"12345","shown":true},{"label":"trackingID","value":"5555","shown":true},{"label":"loanType","value":"car","shown":false},{"label":"vendorID","value":"1613aa23","shown":true},{"label":"vendorName","value":"PSC Finance","shown":false}],"showNsf":false,"incomeStreamConfidenceMinimum":50}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key72
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token62
+    disabled: false
+  _type: request
+  _id: req_9ad735e6b14b405186049eb4b134141c
+  parentId: fld_0e7d9d3743c343eb93fb3c4dc7ebfe91
+  description: "Generate a Verification of Assets with Income (VOAI) report for all checking, savings, money market, and investment accounts for the given customer. This service retrieves up to 24 months of transaction history for each account and uses this information to generate the VOAI report. The report includes 1 - 6 months of all debit and credit transactions for asset verification. By default, the history is set to 61 days, however, you can change the transaction history in this section by setting the `fromDate` parameter. The report also includes up to 24 months of income credit transactions (ordered by account and confidence level) regardless of `fromDate` for income verification.\n\nThis is a premium service. The billable event is the successful generation of a VOAI report.\n\nBefore calling this API, a consumer must be created for the given customer ID (see Consumers APIs).\n\nIf no account of type checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GeneratePrequalificationCRAReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/preQualVoa
+  body:
+    mimeType: application/json
+    text: '{"accountIds":"1000535275","fromDate":1580558400,"reportCustomFields":[{"label":"loanID","value":"12345","shown":true},{"label":"trackingID","value":"5555","shown":true},{"label":"loanType","value":"car","shown":false},{"label":"vendorID","value":"1613aa23","shown":true},{"label":"vendorName","value":"PSC Finance","shown":false}],"showNsf":false}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key61
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token80
+    disabled: false
+  _type: request
+  _id: req_7dff907453584cfda3e0ac44da33482f
+  parentId: fld_0e7d9d3743c343eb93fb3c4dc7ebfe91
+  description: "Retrieve all checking, savings, money market, and investment accounts for a consumer. The account, owner information, and the number of insufficient funds (NSFs) for checking accounts are also provided.\n\nIf no account of type checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GeneratePrequalificationNonCRAReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/assetSummary
+  body:
+    mimeType: application/json
+    text: '{"accountIds":"1000535275","fromDate":1580558400,"reportCustomFields":[{"label":"loanID","value":"12345","shown":true},{"label":"trackingID","value":"5555","shown":true},{"label":"loanType","value":"car","shown":false},{"label":"vendorID","value":"1613aa23","shown":true},{"label":"vendorName","value":"PSC Finance","shown":false}],"showNsf":false}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key53
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token96
+    disabled: false
+  _type: request
+  _id: req_5386230246054c7f8b6b8017f341e6ff
+  parentId: fld_0e7d9d3743c343eb93fb3c4dc7ebfe91
+  description: "Retrieve all checking, savings, money market, and investment accounts for a customer. The account, owner information, and the number of insufficient funds (NSFs) for checking accounts are also provided.\n\nIf no account type of checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateVOIReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/voi
+  body:
+    mimeType: application/json
+    text: '{"accountIds":"1000535275 1000535276","fromDate":1577986990,"reportCustomFields":[{"label":"loanID","value":"12345","shown":true},{"label":"trackingID","value":"5555","shown":true},{"label":"loanType","value":"car","shown":false},{"label":"vendorID","value":"1613aa23","shown":true},{"label":"vendorName","value":"PSC Finance","shown":false}],"incomeStreamConfidenceMinimum":50}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key13
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token86
+    disabled: false
+  _type: request
+  _id: req_bd84770e42c1476ca4072fe12b21a4fc
+  parentId: fld_47da39632e574efbacfefd5c8e2c0c43
+  description: "Generate a Verification of Income (VOI) report for all checking, savings, and money market accounts for the given customer. This service retrieves up to two years of transaction history for each account and uses this information to generate the VOI report.\n\nThis is a premium service. The billing rate is the variable rate for Verification of Income under the current subscription plan. The billable event is the successful generation of a VOI report.\n\nIf no account of type checking, savings, or money market is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateVOEPayrollReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/voePayroll
+  body:
+    mimeType: application/json
+    text: '{"payrollData":{"ssn":"999990000","dob":315576000,"reportId":"abcdefghijkl-voiepayroll"},"reportCustomFields":[{"label":"loanID","value":"12345","shown":true}],"payStatementsFromDate":1580558400,"marketSegment":"Mortgage","excludeEmpInfo":true,"purpose":"99"}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key34
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token38
+    disabled: false
+  _type: request
+  _id: req_556b143cda7e456993933ee7032e9d6a
+  parentId: fld_47da39632e574efbacfefd5c8e2c0c43
+  description: "Premium Service: A billable event when the API response is successful. \n\nMVS Implementation Options: Direct API Integration.\n\nUsed as a complementary report to the VOIE-Payroll report. This report is used to fulfill the pre-close VOE requirements. It retrieves the customer's employment details and employment status through the payroll source without any income information. \n\nTo generate this report, pass the values from the customer SSN, DOB, and the report ID from the first VOIE-Payroll report generated after the Connect session.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateVOETransactionsReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/voeTransactions
+  body:
+    mimeType: application/json
+    text: '{"reportId":"j7k8qbgwsa7d-voietxverify","accountIds":"123456789","fromDate":1580558400,"reportCustomFields":[{"label":"loanID","value":"12345","shown":true},{"label":"trackingID","value":"5555","shown":true},{"label":"loanType","value":"car","shown":false},{"label":"vendorID","value":"1613aa23","shown":true},{"label":"vendorName","value":"PSC Finance","shown":false}],"incomeStreamConfidenceMinimum":50}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key13
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token73
+    disabled: false
+  _type: request
+  _id: req_d0a05014944741f2aeda944e9e6bff3e
+  parentId: fld_47da39632e574efbacfefd5c8e2c0c43
+  description: "Premium Service: A billable event when the API response is successful.\n\nMVS-Direct integration developers only.\n\nUsed as a complimentary report to the VOA with Income and VOIE - Paystub (with TXVerify) reports and used to fulfill the pre-close VOE requirements. \n\nRetrieve the latest credit transaction information from the borrower's connected bank accounts and groups them into income streams so that you can view their payment history to ensure a direct deport was made within the expected cadence. The report displays transaction descriptions without any dollar amounts so that income re-verification isn't necessary.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GeneratePayStatementReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/payStatement
+  body:
+    mimeType: application/json
+    text: '{"paystatementReport":{"assetIds":["6f8fb0a0-e882-4f57-b672-cf53f1397581"],"extractEarnings":true,"extractDeductions":false,"extractDirectDeposit":true},"reportCustomFields":[{"label":"loanID","value":"12345","shown":true},{"label":"trackingID","value":"5555","shown":true},{"label":"loanType","value":"car","shown":false},{"label":"vendorID","value":"1613aa23","shown":true},{"label":"vendorName","value":"PSC Finance","shown":false}]}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key30
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token14
+    disabled: false
+  _type: request
+  _id: req_00972bc666d6474faabcb1edb1c571c2
+  parentId: fld_47da39632e574efbacfefd5c8e2c0c43
+  description: "Generate Pay Statement Extraction Report for the given customer. This service accepts asset IDs of the stored pay statements to generate a Pay Statement Extraction Report. \n\nThis is a premium service. The billing rate is the variable rate for Pay Statement Extraction Report under the current subscription plan. The billable event is the successful generation of a Pay Statement Extraction Report.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateVOIEPaystubWithTXVerifyReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/voieTxVerify/withInterview
+  body:
+    mimeType: application/json
+    text: '{"accountIds":"1028361677","voieWithInterviewData":{"txVerifyInterview":[{"assetId":"7eb57060-6d98-4449-992d-4dd4490448f3-1236011097"}]},"reportCustomFields":[{"label":"loanID","value":"123456","shown":true}]}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key7
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token47
+    disabled: false
+  _type: request
+  _id: req_2c461b4c4305439eb0455f8be955d565
+  parentId: fld_47da39632e574efbacfefd5c8e2c0c43
+  description: "Generate a VOIE - Paystub (with TXVerify) report for all checking and savings under the given customer. This service retrieves up to two years of transaction history for the given accounts. It then uses this information as well as the provided paystub(s), which are passed into the request body as asset IDs (generated using the Store Customer Pay Statement API) to generate the VOIE - Paystub (with TXVerify) report.\n\nNote: if you are using this API to refresh the bank transactions, use the same asset ID from the first report. A new paystub is not required unless the paystub is too old for underwriting requirements. Using the same asset ID that was on the original report and the previously extracted details will be used to speed up report generation response time.\n\nThis is a premium service. The billing rate is the variable rate for VOIE TXVerify under the current subscription plan. The billable event is the successful generation of a VOIE TXVerify Report.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: GenerateVOIEPaystubReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/voieTxVerify/withStatement
+  body:
+    mimeType: application/json
+    text: '{"voieWithStatementData":{"assetIds":["d50ed92f-543b-431c-8286-c8b8f6556679"]},"reportCustomFields":[{"label":"loanID","value":"123456","shown":true},{"label":"trackingID","value":"5555","shown":true}]}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key98
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token36
+    disabled: false
+  _type: request
+  _id: req_20949dbf166a4445a6f8771651c3acd6
+  parentId: fld_47da39632e574efbacfefd5c8e2c0c43
+  description: "Generate a VOIE - Paystub report. This service uses the provided paystub(s), which are passed into the request body as asset IDs (generated using the Store Customer Pay Statement API) to generate the VOIE - Paystub report with digitized paystub details.\n\nThis is a premium service. The billing rate is the variable rate for VOIE - Paystub under the current subscription plan. The billable event is the successful generation of a VOIE - Paystub Report.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
+- name: RefreshVOIEPayrollReport
+  method: POST
+  url: https://api.finicity.com/decisioning/v2/customers/{customerId}/voiePayroll
+  body:
+    mimeType: application/json
+    text: '{"payrollData":{"ssn":"999990000","dob":315576000,"reportId":"abcdefghijkl-voiepayroll"},"reportCustomFields":[{"label":"loanID","value":"12345","shown":true}],"payStatementsFromDate":1580558400,"marketSegment":"Mortgage","excludeEmpInfo":true,"purpose":"99"}'
+  parameters:
+  - name: callbackUrl
+    value: https://finicity-test/webhook
+    disabled: false
+  headers:
+  - name: Content-Type
+    value: application/json
+    disabled: false
+  - name: Finicity-App-Key
+    value: Finicity-App-Key58
+    disabled: false
+  - name: Finicity-App-Token
+    value: Finicity-App-Token49
+    disabled: false
+  _type: request
+  _id: req_cb59ab0c39154d138d89f27de4aec6d8
+  parentId: fld_47da39632e574efbacfefd5c8e2c0c43
+  description: "The VOIE – Payroll report generates when the customer completes Connect. Lenders, who commonly use this report for pre-close verification employment check, can refresh this report by passing the consumer's SSN, DOB, and the report ID from the first VOIE – Payroll report they received.\n\nWe'll refresh this report and update any new pay histories since the first report generated, including borrower's employment status as active or not.\n\nNote: lenders can only refresh this report one time in a 60-day period starting from the date of the first report. Any further report refreshes will incur additional charges.\n\n_Supported regions_: ![\U0001F1FA\U0001F1F8](https://flagcdn.com/20x15/us.png)"
